@@ -1,20 +1,21 @@
 package co.edu.uptc.models;
 
-public class Teacher {
+import co.edu.uptc.logic.BaseClass;
+
+public class Teacher extends BaseClass {
 
 	private String firstName;
 	private String lastName;
-	private String idCode;
 	private String contractType;
 	private boolean teachingStatus;
 	public Teacher() {
 		super();
 	}
-	public Teacher(String firstName, String lastName, String idCode, String contractType, boolean teachingStatus) {
+	public Teacher(String firstName, String lastName, String id, String contractType, boolean teachingStatus) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.idCode = idCode;
+		this.id = id;
 		this.contractType = contractType;
 		this.teachingStatus = teachingStatus;
 	}
@@ -30,11 +31,11 @@ public class Teacher {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public String getIdCode() {
-		return idCode;
+	public String getId() {
+		return id;
 	}
-	public void setIdCode(String idCode) {
-		this.idCode = idCode;
+	public void setId(String id) {
+		this.id = id;
 	}
 	public String getContractType() {
 		return contractType;
@@ -47,6 +48,11 @@ public class Teacher {
 	}
 	public void setTeachingStatus(boolean teachingStatus) {
 		this.teachingStatus = teachingStatus;
+	}
+	@Override
+	public String toString() {
+		return "Teacher [firstName=" + firstName + ", lastName=" + lastName + ", contractType=" + contractType
+				+ ", teachingStatus=" + teachingStatus + "]";
 	}
 	
 	

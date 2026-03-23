@@ -1,19 +1,20 @@
 package co.edu.uptc.models;
 
-public class Campus {
+import co.edu.uptc.logic.BaseClass;
+
+public class Campus extends BaseClass {
 
 	private String campusName;
-	private String idCampus;
 	private int capacity;
 	private double totalArea;
 	private String cityName;
 	public Campus() {
 		super();
 	}
-	public Campus(String campusName, String idCampus, int capacity, double totalArea, String cityName) {
+	public Campus(String campusName, String id, int capacity, double totalArea, String cityName) {
 		super();
 		this.campusName = campusName;
-		this.idCampus = idCampus;
+		this.id = id;
 		this.capacity = capacity;
 		this.totalArea = totalArea;
 		this.cityName = cityName;
@@ -24,11 +25,11 @@ public class Campus {
 	public void setCampusName(String campusName) {
 		this.campusName = campusName;
 	}
-	public String getIdCampus() {
-		return idCampus;
+	public String getId() {
+		return id;
 	}
-	public void setIdCampus(String idCampus) {
-		this.idCampus = idCampus;
+	public void setId(String id) {
+		this.id = id;
 	}
 	public int getCapacity() {
 		return capacity;
@@ -47,6 +48,11 @@ public class Campus {
 	}
 	public void setCityName(String cityName) {
 		this.cityName = cityName;
+	}
+	@Override
+	public String toString() {
+		return "Campus [campusName=" + campusName + ", capacity=" + capacity + ", totalArea=" + totalArea
+				+ ", cityName=" + cityName + "]";
 	}
 	
 	

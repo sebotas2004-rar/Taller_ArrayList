@@ -2,22 +2,25 @@ package co.edu.uptc.models;
 
 import java.time.LocalDate;
 
-public class University {
+import co.edu.uptc.logic.BaseClass;
+
+public class University extends BaseClass {
 
 	private String name;
-	private String nitId;
 	private String address;
 	private String website;
 	private LocalDate foundationDate;
 	private boolean publicService;
+	
 	public University() {
 		super();
 	}
-	public University(String name, String nitId, String address, String website, LocalDate foundationDate,
+	
+	public University(String name, String id, String address, String website, LocalDate foundationDate,
 			boolean publicService) {
 		super();
 		this.name = name;
-		this.nitId = nitId;
+		this.id = id;
 		this.address = address;
 		this.website = website;
 		this.foundationDate = foundationDate;
@@ -29,11 +32,11 @@ public class University {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getNitId() {
-		return nitId;
+	public String getId() {
+		return id;
 	}
-	public void setNitId(String nitId) {
-		this.nitId = nitId;
+	public void setId(String id) {
+		this.id = id;
 	}
 	public String getAddress() {
 		return address;
@@ -58,6 +61,12 @@ public class University {
 	}
 	public void setPublicService(boolean publicService) {
 		this.publicService = publicService;
+	}
+
+	@Override
+	public String toString() {
+		return "University [name=" + name + ", address=" + address + ", website=" + website + ", foundationDate="
+				+ foundationDate + ", publicService=" + publicService + "]";
 	}
 	
 	

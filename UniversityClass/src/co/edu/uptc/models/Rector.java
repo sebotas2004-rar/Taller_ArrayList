@@ -2,9 +2,10 @@ package co.edu.uptc.models;
 
 import java.time.LocalDate;
 
-public class Rector {
+import co.edu.uptc.logic.BaseClass;
 
-	private String employeedId;
+public class Rector extends BaseClass {
+
 	private String academicTitle;
 	private boolean workStatus;
 	private String recName;
@@ -14,22 +15,22 @@ public class Rector {
 		super();
 	}
 
-	public Rector(String employeedId, String academicTitle, boolean workStatus,  String recName,
+	public Rector(String id, String academicTitle, boolean workStatus,  String recName,
 			LocalDate appointmentDate) {
 		super();
-		this.employeedId = employeedId;
+		this.id = id;
 		this.academicTitle = academicTitle;
 		this.workStatus = workStatus;
 		this.recName = recName;
 		this.appointmentDate = appointmentDate;
 	}
 
-	public String getEmployeedId() {
-		return employeedId;
+	public String getId() {
+		return id;
 	}
 
-	public void setEmployeedId(String employeedId) {
-		this.employeedId = employeedId;
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getAcademicTitle() {
@@ -63,6 +64,14 @@ public class Rector {
 	public void setAppointmentDate(LocalDate appointmentDate) {
 		this.appointmentDate = appointmentDate;
 	}
+
+	@Override
+	public String toString() {
+		return "Rector [academicTitle=" + academicTitle + ", workStatus=" + workStatus + ", recName=" + recName
+				+ ", appointmentDate=" + appointmentDate + "]";
+	}
+
+	
 	
 	
 }

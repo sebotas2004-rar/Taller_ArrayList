@@ -1,9 +1,10 @@
 package co.edu.uptc.models;
 
-public class Student {
+import co.edu.uptc.logic.BaseClass;
+
+public class Student extends BaseClass {
 private String firstName;
 private String lastName;
-private String idStudent;
 private int currentSemester;
 private int age;
 
@@ -11,11 +12,11 @@ public Student() {
 	super();
 }
 
-public Student(String firstName, String lastName, String idStudent, int currentSemester, int age) {
+public Student(String firstName, String lastName, String id, int currentSemester, int age) {
 	super();
 	this.firstName = firstName;
 	this.lastName = lastName;
-	this.idStudent = idStudent;
+	this.id = id;
 	this.currentSemester = currentSemester;
 	this.age = age;
 }
@@ -36,12 +37,12 @@ public void setLastName(String lastName) {
 	this.lastName = lastName;
 }
 
-public String getIdStudent() {
-	return idStudent;
+public String getId() {
+	return id;
 }
 
-public void setIdStudent(String idStudent) {
-	this.idStudent = idStudent;
+public void setId(String id) {
+	this.id = id;
 }
 
 public int getCurrentSemester() {
@@ -58,6 +59,12 @@ public int getAge() {
 
 public void setAge(int age) {
 	this.age = age;
+}
+
+@Override
+public String toString() {
+	return "Student [firstName=" + firstName + ", lastName=" + lastName + ", currentSemester=" + currentSemester
+			+ ", age=" + age + "]";
 }
 
 
